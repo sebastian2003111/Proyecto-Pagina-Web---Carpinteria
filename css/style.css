@@ -34,7 +34,6 @@ h1,h2{
 
 /* HEADER */
 .header {
-  background: url("madera-header.jpg");
   background-size: cover;
   padding: 15px 40px;
   display: flex;
@@ -273,7 +272,6 @@ max-width: 150px;
 
 /* TRABAJOS */
 .trabajos{
-    background:url('img/madera-textura.jpg');
     background-size:cover;
     padding:70px 0;
     color:white;
@@ -421,7 +419,6 @@ max-width: 150px;
 /** CSS SERVICIOS **/
 
 body{
-    background-image: url(/img/imagen_madera.png);
     font-family:'Open Sans', sans-serif;
     color:#333;
 }
@@ -438,7 +435,7 @@ h1,h2{
 
 /* ===== HERO SERVICIOS ===== */
 .hero-servicios {
-  background-image: url("/img_servicios/hero_servicios.png");
+  background-image: url("/img/hero_servicios.png");
   background-size: cover;
   background-position: left;
   height: 320px;
@@ -610,7 +607,6 @@ margin-bottom: 15px;
 
 
 body{
-    background-image: url(/img/imagen_madera.png);
     font-family:'Open Sans', sans-serif;
     color:#333;
 }
@@ -619,7 +615,7 @@ body{
 /* ===== HERO CONTACTO ===== */
 .hero-contacto {
   font-family:'Roboto Slab', serif;
-  background-image: url("/img_contacto/hero_contacto.png");
+  background-image: url("/img/hero_contacto.png");
   font-family:'Roboto Slab', serif;
   background-size: cover;
   background-position: left;
