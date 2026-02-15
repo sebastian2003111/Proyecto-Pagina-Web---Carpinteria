@@ -10,6 +10,18 @@
     --Marron: #65442a;
 }
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
 body{
     background-image: url(/img/imagen_madera.png);
     font-family:'Open Sans', sans-serif;
@@ -363,24 +375,16 @@ max-width: 150px;
         gap: 20px;
     }
 
-    .boton3{
-        margin: 20px auto;
-        display: block;
-    }
 }
 
-.contacto .container .boton{
-    align-items: center;
-    display: flex;
-    gap: 20px;
-}
+
 
 .boton3{
     padding: 12px 2px;
     background-color: var(--GrisClaro);
     color: rgb(0, 0, 0);
     border: none;
-    font-size: clamp(1rem, 2.5vw, 20px);
+    font-size: 20px;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -430,55 +434,6 @@ body{
 
 h1,h2{
     font-family:'Roboto Slab', serif;
-}
-
-/* ===== HEADER ===== */
-
-
-
-@media(max-width:768px){
-    .logo{
-        padding-right: 0;
-    }
-}
-
-.nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-@media (max-width: 768px){
-
-    .nav{
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a{
-        margin: 8px 0;
-    }
-}
-
-
-nav a{
-    color:white;
-    margin-left:25px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-nav a:hover{
-    color: var(--Negro);
-    background-color: var(--Marron);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.8);
 }
 
 /* ===== HERO SERVICIOS ===== */
@@ -654,113 +609,12 @@ margin-bottom: 15px;
 /* ===== HEADER ===== */
 
 
-
-@media(max-width:768px){
-    .logo{
-        padding-right: 0;
-    }
-}
-
-.nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-@media (max-width: 768px){
-
-    .nav{
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a{
-        margin: 8px 0;
-    }
-}
-
-
-nav a{
-    color:white;
-    margin-left:25px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-nav a:hover{
-    color: var(--Negro);
-    background-color: var(--Marron);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.8);
-}
-
 body{
     background-image: url(/img/imagen_madera.png);
     font-family:'Open Sans', sans-serif;
     color:#333;
 }
 
-.logo{
-    padding: 2%;
-    display: inline;
-    gap: 12px;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-    font-family:'Roboto Slab', serif;
-}
-
-
-@media(max-width:768px){
-    .logo{
-        padding-right: 0;
-    }
-}
-
-.nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-@media (max-width: 768px){
-
-    .nav{
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a{
-        margin: 8px 0;
-    }
-}
-
-
-nav a{
-    color:white;
-    margin-left:25px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-nav a:hover{
-    color: var(--Negro);
-    background-color: var(--Marron);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.8);
-}
 
 /* ===== HERO CONTACTO ===== */
 .hero-contacto {
@@ -951,3 +805,4 @@ footer{
     box-sizing: border-box;
     scroll-snap-type: y mandatory;
 }
+
