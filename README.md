@@ -55,10 +55,14 @@ Se implementaron:
 
 ## 🎨 Paleta de Colores
 
-- Marrón principal: `#65442a`
-- Verde menta: `#2EC4B6`
-- Blanco: `#FFFFFF`
-- Tonos madera en imágenes de fondo
+    --Negro: #000000;
+    --AzulGrisaceo: #000000;
+    --VerdeMenta: #2EC4B6;
+    --GrisClaro: #F5F7FA;
+    --GrisOscuro: #ffffff;
+    --Blanco: #FFFFFF;
+    --GrisClaro: #ffffff;
+    --Marron: #65442a;
 
 ---
 
