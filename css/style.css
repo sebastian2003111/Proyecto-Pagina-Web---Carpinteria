@@ -1,13 +1,15 @@
 :root{
     
     --Negro: #000000;
-    --AzulGrisaceo: #000000;
     --VerdeMenta: #2EC4B6;
     --GrisClaro: #F5F7FA;
-    --GrisOscuro: #ffffff;
+    --GrisOscuro: #353131;
     --Blanco: #FFFFFF;
-    --GrisClaro: #ffffff;
+    --GrisClaro: #9b9b9b;
     --Marron: #65442a;
+    --beige: #F5E6D3;
+    --MarronClaro: #f0e6dc;
+    --Verde: #1ebe5d;
 }
 
 img{
@@ -54,6 +56,8 @@ h1,h2{
     }
 }
 
+/** BARRA DE NAVEGACION; APLICA PARA TODAS LAS PAGINAS**/
+
 .nav{
     display:flex;
     justify-content:space-between;
@@ -88,18 +92,67 @@ nav a{
 
 nav a:hover{
     color: var(--Negro);
-    background-color: var(--Marron);
-    transform: translateY(-3px);
+    background-color: var(--Blanco);
+    transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.8);
 }
+.nav a.activo {
+    box-shadow: 0 8px 20px rgba(250, 250, 250, 0.8);
+    background-color: var(--Blanco) transparent 100%;
+    color: var(--Blanco);
+    border-radius: 100%;
+}
 
-/* HERO */
+
+/** ========================= PAGINA INICIIO =========================**/
+
+
+/*-------------- HERO -----------*/
 .hero{
     background:url('/img/hero.png') center/cover no-repeat;
     height:80vh;
     display:flex;
     text-align: left;
-    color:white;
+    color:var(--Blanco);
+}
+
+.boton1{
+    background-color: var(--Marron);
+    color: var(--Blanco);
+    border: none;
+    font-size: clamp(1rem, 2.5vw, 20px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(247, 247, 247, 0.8);
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton1:hover {
+	background-color: var(--Blanco);
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(47, 33, 37, 0.8);
+    color: var(--Negro);
+}
+
+@media (min-width: 480px) {
+    .boton1 {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px){
+    .boton1{
+        padding: 15px 30px;
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 768px){
@@ -138,91 +191,16 @@ nav a:hover{
     margin-bottom:25px;
     font-size:14px;
 }
-
-.boton1{
-    background-color: var(--GrisClaro);
-    color: rgb(0, 0, 0);
-    border: none;
-    font-size: clamp(1rem, 2.5vw, 20px);
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(247, 247, 247, 0.8);
-    text-decoration: none;
-    font-weight: bold;
-    width: 100%;
-    max-width: 200px;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.boton1:hover {
-	background-color: var(--Marron);
-	transform: translateY(-5px);
-	box-shadow: 0 8px 20px rgba(21, 11, 14, 0.8);
-}
-
-@media (min-width: 480px) {
-    .boton1 {
-        padding: 15px 30px;
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 768px){
-    .boton1{
-        padding: 15px 30px;
-        font-size: 20px;
-    }
-}
-.boton2{
-    background-color: var(--GrisClaro);
-    color: rgb(0, 0, 0);
-    border: none;
-    font-size: clamp(1rem, 2.5vw, 20px);
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(247, 247, 247, 0.8);
-    text-decoration: none;
-    font-weight: bold;
-    width: 100%;
-    max-width: 200px;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.boton2:hover {
-	background-color: var(--Marron);
-	transform: translateY(-5px);
-	box-shadow: 0 8px 20px rgba(21, 11, 14, 0.8);
-}
-
-@media (min-width: 480px) {
-    .boton2 {
-         padding: 15px 30px;
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 768px){
-    .boton2{
-        padding: 15px 30px;
-        font-size: 20px;
-    }
-}
-
-
+/** ----------- Nuestros Servicios ------------**/
 
 /* SERVICioS */
 .servicios{
     color: var(--Marron);
     padding: 45px 0;
-    background:#f0e6dc;
+    background:var(--Blanco);
     text-align:center;
     font-family:'Roboto Slab', serif;
+    border-radius: 10;
 }
 .section-title::before, .section-title::after {
 content: "";
@@ -257,14 +235,14 @@ max-width: 150px;
     background:white;
     padding: 55px 45px;
     border-radius:8px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    box-shadow:0 5px 15px rgba(89, 47, 20, 0.8);
 }
 
 .card:hover{
     transform: translateY(-5px);
 }
 
-/* TRABAJOS */
+/*--------------- TRABAJOS ----------------*/
 .trabajos{
     background-size:cover;
     padding:70px 0;
@@ -298,7 +276,53 @@ max-width: 150px;
     border-radius:5px;
 }
 
-/* NOSOTROS */
+
+/** Boton Ver Galeria **/
+.boton2{
+    background-color: var(--Marron);
+    color: var(--Blanco);
+    border: none;
+    font-size: clamp(1rem, 2.5vw, 20px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(247, 247, 247, 0.8);
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton2:hover {
+	background-color: var(--Blanco);
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(21, 11, 14, 0.8);
+    color: var(--Negro);
+}
+
+@media (min-width: 480px) {
+    .boton2 {
+         padding: 15px 30px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px){
+    .boton2{
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+/*--------------- NOSOTROS -----------------*/
 .nosotros{
     padding: 2px 0;
     background:#f5f1eb;
@@ -337,7 +361,7 @@ max-width: 150px;
     border-radius:8px;
     }
 
-/* CONTACTO */
+/*-------------- CONTACTO ---------------*/
 .contacto-inicio{
     display: grid;
     background-color: rgba(0, 0, 0, .3);
@@ -369,11 +393,9 @@ max-width: 150px;
 
 }
 
-
-
 .boton3{
     padding: 12px 2px;
-    background-color: var(--GrisClaro);
+    background-color: var(--Marron);
     color: rgb(0, 0, 0);
     border: none;
     font-size: 20px;
@@ -389,9 +411,10 @@ max-width: 150px;
 }
 
 .boton3:hover {
-	background-color: var(--Marron);
+	background-color: var(--Blanco);
 	transform: translateY(-5px);
 	box-shadow: 0 8px 20px rgba(21, 11, 14, 0.8);
+    color: var(--Negro);
 }
 
 
@@ -410,24 +433,9 @@ max-width: 150px;
 }
 
 
-/** CSS SERVICIOS **/
+/* ========================= PAGINA SERVICIOS ========================= */
 
-body{
-    font-family:'Open Sans', sans-serif;
-    color:#333;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-h1,h2{
-    font-family:'Roboto Slab', serif;
-}
-
-/* ===== HERO SERVICIOS ===== */
+/* ---------- HERO SERVICIOS --------*/
 .hero-servicios {
   background-image: url("/img/hero_servicios.png");
   background-size: cover;
@@ -447,49 +455,11 @@ h1,h2{
   text-align: center;
 }
 
-.boton1{
-    background-color: var(--GrisClaro);
-    color: rgb(0, 0, 0);
-    border: none;
-    font-size: clamp(1rem, 2.5vw, 20px);
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(247, 247, 247, 0.8);
-    text-decoration: none;
-    font-weight: bold;
-    width: 100%;
-    max-width: 200px;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.boton1:hover {
-	background-color: var(--Marron);
-	transform: translateY(-5px);
-	box-shadow: 0 8px 20px rgba(21, 11, 14, 0.8);
-}
-
-@media (min-width: 480px) {
-    .boton1 {
-        padding: 15px 30px;
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 768px){
-    .boton1{
-        padding: 15px 30px;
-        font-size: 20px;
-    }
-}
-
-/* ===== SERVICIOS ===== */
+/** ----------- Nuestros Servicios ------------**/
 .services-section {
 padding: 50px 10%;
 text-align: center;
-background: var(--Blanco); /* Tono madera clara */
+background: var(--Blanco);
 font-family:'Roboto Slab', serif;
 }
 
@@ -538,17 +508,17 @@ margin-bottom: 15px;
 .service-card p { font-size: 0.9rem; line-height: 1.4; color: #666; }
 
 /* ===== CTA ===== */
-.cta {
-  background-color: var(--madera-media);
+.cta-servicio {
   color: var(--Blanco);
   text-align: center;
   padding: 50px 20px;
   
 }
 
-.boton{
+/** Boton Contactar por WhatsApp**/
+.boton-contac-servicio{
     padding: 12px 25px;
-    background-color: var(--GrisClaro);
+    background-color: var(--Marron);
     color: rgb(0, 0, 0);
     border: none;
     font-size: clamp(1rem, 2.5vw, 20px);
@@ -563,20 +533,20 @@ margin-bottom: 15px;
     display: inline-block;
 }
 
-.boton:hover {
-	background-color: var(--Marron);
+.boton-contac-servicio:hover {
+	background-color: var(--Blanco);
 	transform: translateY(-5px);
 	box-shadow: 0 8px 20px rgba(21, 11, 14, 0.8);
 }
 
 @media (min-width: 480px) {
-    .boton {
+    .boton-contac-servicio{
         width: auto;
     }
 }
 
 @media (min-width: 768px){
-    .boton{
+    .boton-contac-servicio{
         padding: 15px 30px;
         font-size: 20px;
     }
@@ -594,16 +564,172 @@ margin-bottom: 15px;
     height: 220px;
   }
 }
-
-/** ============= CSS CONTACTO =============== **/
-
-/* ===== HEADER ===== */
+/** ========================= PAGINA TRABAJOS =========================**/
 
 
-body{
-    font-family:'Open Sans', sans-serif;
-    color:#333;
+
+
+
+/** ========================= PAGINA NOSOTROS =========================**/
+/* =========================
+   HERO NOSOTROS
+========================= */
+
+.hero-nosotros {
+    height: 40vh;
+    background: linear-gradient(rgba(0,0,0,0.4)),
+    url("img/") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--Blanco);
+    padding: 20px;
 }
+
+.hero-nosotros h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 15px;
+}
+
+.hero-nosotros p {
+    font-size: 1.2rem;
+}
+
+
+/* =========================
+   SECCIÓN HISTORIA
+========================= */
+
+.nosotros-section {
+    background: var(--Blanco);
+    padding: 80px 10%;
+    
+}
+
+.nosotros-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--Marron);
+}
+
+.nosotros-texto p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+
+/* =========================
+   MISIÓN Y VISIÓN
+========================= */
+
+.mision-vision {
+    padding: 70px 10%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: var(--MarronClaro);
+    font-family:'Roboto Slab', serif;
+}
+
+.card-mv {
+    flex: 1;
+    background: linear-gradient(to bottom, #6b4423, #4b2f17);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    transition: 0.3s;
+    
+}
+
+.card-mv:hover {
+    transform: translateY(-5px);
+    
+}
+
+.card-mv h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .nosotros-container {
+        flex-direction: column;
+    }
+
+    .mision-vision {
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================
+   VALORES
+========================= */
+
+.valores {
+    padding: 70px 10%;
+    text-align: center;
+    background: #f5efe6;
+    font-family:'Roboto Slab', serif;
+
+}
+
+.valores h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--Marron);
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+  
+}
+
+.valor {
+    background-image: url(/img/imagen_madera.png);
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    background-color: var(--MarronClaro);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.valor:hover {
+    transform: scale(1.05);
+}
+
+/** ========================= PAGINA CONTACTO =========================**/
 
 
 /* ===== HERO CONTACTO ===== */
@@ -632,9 +758,9 @@ body{
   margin-bottom: 10px;
 }
 
-/** Main **/
 
-/* ===== CONTACTO ===== */
+
+/* ===== Informacion contacto y Formulario ===== */
 
 .contacto {
   background-color: var(--Blanco);
@@ -645,6 +771,19 @@ body{
 }
 
 /* Información */
+
+
+.info-contacto{
+    font-family:'Roboto Slab', serif;
+    background-color: var(--MarronClaro);
+    width: min(60rem, 90%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 2rem;
+    
+}
 .info-contacto h2,
 .form-contacto h2 {
   margin-bottom: 25px;
@@ -654,7 +793,7 @@ body{
 
 .info-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 20px;
   font-family:'Roboto Slab', serif;
 }
@@ -665,110 +804,130 @@ body{
 }
 
 /* Formulario */
-.form-contacto form {
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.form-contacto input,
-.form-contacto textarea {
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #000000;
-  border-radius: 5px;
-}
-
-.form-contacto textarea {
-  resize: none;
-  height: 120px;
-}
-
-.boton1-contacto{
+.formulario{
     font-family:'Roboto Slab', serif;
-    padding: 12px 25px;
-    background-color: var(--Marron);
-    color: rgb(255, 255, 255);
+    background-color: var(--MarronClaro);
+    width: min(50rem, 90%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.formulario fieldset{
+    border-color: #2EC4B6;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--Marron);
+}
+
+.formulario fieldset {
     border: none;
-    font-size: clamp(1rem, 2.5vw, 20px);
+}
+@media (min-width: 768px){
+    .contenedor-campos{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto  auto 20rem;
+      column-gap: 1rem;
+      row-gap: 1rem;
+       
+    }
+
+    .campo:nth-child(3), 
+    .campo:nth-child(4){
+        grid-column: 1 / 3;
+    }
+        
+    
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+    display: block;
+    color: var(--Marron);
+}
+
+.input-text{
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: .5rem;
+}
+
+.boton{
+    display: flex;
+    justify-items: center;
+    background-color: var(--Marron);
+    padding: 1rem 3rem;
+    color: var(--Blanco);
+    border: none;
+    font-size: 20px;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(247, 247, 247, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
     text-decoration: none;
     font-weight: bold;
-    width: 100%;
-    max-width: 300px;
-    display: inline-block;
-}
 
-.boton1-contacto:hover {
-	background-color: var(--Negro);
-	transform: translateY(-5px);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
-}
-
-@media (min-width: 480px) {
-    .boton1-contacto {
-        width: auto;
-    }
 }
 
 @media (min-width: 768px){
-    .boton1-contacto{
-        padding: 15px 30px;
-        font-size: 20px;
+    .boton{
+        width: auto;;
     }
+}
+
+.boton:hover {
+    background-color: var(--Negro);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(21, 11, 14, 0.8);
 }
 
 
 
-/* ===== CTA ===== */
+/* ------ CTA ------- */
 .cta {
   font-family:'Roboto Slab', serif;
-  color: white;
+  color: var(--Blanco);
   text-align: center;
   padding: 50px 20px;
 }
 
-.boton2-contacto{
-    padding: 12px 25px;
-    background-color: var(--GrisClaro);
-    color: rgb(0, 0, 0);
-    border: none;
-    font-size: clamp(1rem, 2.5vw, 20px);
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(247, 247, 247, 0.8);
+/** Boton Contactar por WhatsAppp**/
+
+.boton-whatsapp {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: var(--Marron); /* Color oficial WhatsApp */
+    color: var(--Blanco);
     text-decoration: none;
     font-weight: bold;
-    width: 100%;
-    max-width: 300px;
-    display: inline-block;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.boton2-contacto:hover {
-	background-color: var(--Marron);
-	transform: translateY(-5px);
-	box-shadow: 0 8px 20px rgba(21, 11, 14, 0.8);
+.boton-whatsapp:hover {
+    transform: translateY(-5px);
+    background-color: #1ebe5d;
+    box-shadow: 0 8px 20px rgba(13, 219, 37, 0.8);
+    color: var(--Negro);
 }
-
-@media (min-width: 480px) {
-    .boton2-contacto {
-        width: auto;
-    }
-}
-
-@media (min-width: 768px){
-    .boton2-contacto{
-        padding: 15px 30px;
-        font-size: 20px;
-    }
-}
-
-/* ===== FOOTER ===== */
-
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
@@ -783,10 +942,22 @@ body{
 }
 
 
+/* =========================
+   FOOTER
+========================= */
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+
+
 /*** ===== FOOTER: APLICA PARA TODAS LA PAGINAS ===== */
 footer{
     font-family:'Roboto Slab', serif;
-    background-color: var(--AzulGrisaceo);
+    background-color: var(--Negro);
     padding: 2rem 0;
     margin-top: 4rem;
     text-align: center;

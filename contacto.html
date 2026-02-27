@@ -16,7 +16,7 @@
         <a href="servicios.html">Servicios</a>
         <a href="trabajos.html">Trabajos</a>
         <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html" class="activo">Contacto</a>
       </nav>
     </div>
   </header>
@@ -31,47 +31,72 @@
   </section>
   
       <!-- ===== SECCIÓN CONTACTO ===== -->
-  <section class="contacto">
+       <Main>
+        <section class="contacto">
 
     <!-- Información -->
     <div class="info-contacto">
       <h2>Información de Contacto</h2>
 
       <div class="info-item">
-        <span>📱</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2EC4B6" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.497 4.409a10 10 0 0 1 -10.36 16.828l-.223 -.098l-4.759 .849l-.11 .011a1 1 0 0 1 -.11 0l-.102 -.013l-.108 -.024l-.105 -.037l-.099 -.047l-.093 -.058l-.014 -.011l-.012 -.007l-.086 -.073l-.077 -.08l-.067 -.088l-.056 -.094l-.034 -.07l-.04 -.108l-.028 -.128l-.012 -.102a1 1 0 0 1 0 -.125l.012 -.1l.024 -.11l.045 -.122l1.433 -3.304l-.009 -.014a10 10 0 0 1 1.549 -12.454l.215 -.203a10 10 0 0 1 13.226 -.217m-8.997 3.09a1.5 1.5 0 0 0 -1.5 1.5v1a6 6 0 0 0 6 6h1a1.5 1.5 0 0 0 0 -3h-1l-.144 .007a1.5 1.5 0 0 0 -1.128 .697l-.042 .074l-.022 -.007a4.01 4.01 0 0 1 -2.435 -2.435l-.008 -.023l.075 -.041a1.5 1.5 0 0 0 .704 -1.272v-1a1.5 1.5 0 0 0 -1.5 -1.5" /></svg></span>
         <p><strong>WhatsApp:</strong><br>+56 9 1234 5678</p>
       </div>
 
       <div class="info-item">
-        <span>📞</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4a2c1a" class="icon icon-tabler icons-tabler-filled icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 3a1 1 0 0 1 .877 .519l.051 .11l2 5a1 1 0 0 1 -.313 1.16l-.1 .068l-1.674 1.004l.063 .103a10 10 0 0 0 3.132 3.132l.102 .062l1.005 -1.672a1 1 0 0 1 1.113 -.453l.115 .039l5 2a1 1 0 0 1 .622 .807l.007 .121v4c0 1.657 -1.343 3 -3.06 2.998c-8.579 -.521 -15.418 -7.36 -15.94 -15.998a3 3 0 0 1 2.824 -2.995l.176 -.005h4z" /></svg></span>
         <p><strong>Teléfono:</strong><br>+56 2 1234 5678</p>
       </div>
 
       <div class="info-item">
-        <span>📍</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4a2c1a" class="icon icon-tabler icons-tabler-filled icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6" /></svg></span>
         <p><strong>Ubicación:</strong><br>Av. Los Robles 123, Ciudad</p>
       </div>
     </div>
 
     <!-- Formulario -->
-    <div class="form-contacto">
-      <h2>Envíanos un Mensaje</h2>
+    <form class="formulario">
+            <fieldset>
+                <legend>Envianos un Mensaje</legend>
 
-      <form>
-        <input type="text" placeholder="Nombre completo" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="tel" placeholder="Teléfono">
-        <textarea placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
-        <button class="boton1-contacto" type="submit">Enviar Mensaje</button>
-      </form>
-    </div>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input class="input-text" type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono:</label>
+                        <input class="input-text" type="tel" id="telefono" name="telefono" placeholder="+573000000000">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Correo Electrónico:</label>
+                        <input class="input-text" type="email" id="email" name="email" placeholder="Tu E-mail">
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea class="input-text" id="mensaje" name="mensaje" placeholder="Cuentanos sobre tu proyecto"></textarea>
+                    </div>                   
+                </div>
+
+                <div class="alinear-derecha flex">
+                    <input class="boton w-sm-100" type="submit" value="Enviar">
+                </div>
+            </fieldset>
+        </form>
 
   </section>
-  </main>
+       </Main>
    <!-- ===== CTA ===== -->
   <section class="cta">
     <h2>¿Prefieres escribirnos directamente?</h2>
-    <a href="#" class="boton2-contacto">Contactar por WhatsApp</a>
+    <a href="https://wa.me/573001234567?text=Hola%20quiero%20informacion%20sobre%20sus%20servicios"
+   target="_blank"
+   class="boton-whatsapp">
+   Contáctanos por WhatsApp
+</a>
   </section>
   <!-- ===== FOOTER ===== -->
  <footer>
@@ -80,6 +105,8 @@
     <p>Diseñado por Sebastián Bohórquez</p>
   </div>
 </footer>
+
+<script src="/JavaScript/script.js"> </script>
 
 </body>
 </html>
