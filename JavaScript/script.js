@@ -1,8 +1,8 @@
 /**  ================================== CONTACTO ==================================**/
 
-/**
- * Formulario
- */
+// =============================
+// FORMULARIO DE CONTACTO
+// =============================
 const formulario = document.querySelector('.formulario');
 
 if(formulario){
@@ -32,11 +32,13 @@ if(formulario){
     });
 }
 
-
 const datosGuardados = localStorage.getItem('Mensaje_Usuario');
 if (datosGuardados){
     console.log(JSON.parse(datosGuardados));
 }
+
+
+/**  ================================== NOSOTROS ==================================**/
 
 // =============================
 // VER MÁS / VER MENOS
