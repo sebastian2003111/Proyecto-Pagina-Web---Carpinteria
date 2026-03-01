@@ -37,3 +37,31 @@ const datosGuardados = localStorage.getItem('Mensaje_Usuario');
 if (datosGuardados){
     console.log(JSON.parse(datosGuardados));
 }
+
+// =============================
+// VER MÁS / VER MENOS
+// =============================
+
+const botonVermas = document.getElementById("boton-vermas");
+const bioCompleta = document.getElementById("bio-completa");
+
+if (botonVermas && bioCompleta) {
+
+    botonVermas.addEventListener("click", () => {
+
+        const estaOculto = bioCompleta.classList.contains("oculto");
+
+        if (estaOculto) {
+            bioCompleta.classList.remove("oculto");
+            bioCompleta.classList.add("visible");
+            botonVermas.textContent = "Ver menos";
+        } else {
+            bioCompleta.classList.remove("visible");
+            bioCompleta.classList.add("oculto");
+            botonVermas.textContent = "Ver más";
+        }
+
+    });
+
+}
+

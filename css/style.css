@@ -22,6 +22,7 @@ body{
     background-image: url(/img/imagen_madera.png);
     font-family:'Open Sans', sans-serif;
     color:#333;
+    
 }
 
 h1,h2{
@@ -57,11 +58,16 @@ h1,h2{
 }
 
 /** BARRA DE NAVEGACION; APLICA PARA TODAS LAS PAGINAS**/
-
+.container nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 .nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding: 50 40;
 }
 
 @media (max-width: 768px){
@@ -84,10 +90,10 @@ h1,h2{
 
 
 nav a{
-    color:white;
+    color:var(--Blanco);
     margin-left:25px;
     text-decoration:none;
-    font-weight:600;
+    font-weight: 600px;
 }
 
 nav a:hover{
@@ -317,11 +323,6 @@ max-width: 150px;
     }
 }
 
-
-
-
-
-
 /*--------------- NOSOTROS -----------------*/
 .nosotros{
     padding: 2px 0;
@@ -357,9 +358,17 @@ max-width: 150px;
 
 
 .about-grid img{
-    width:100%;
-    border-radius:8px;
-    }
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: 0.4s;
+    border-radius: 2%;
+}
+
+.about-grid:hover img{
+    transform: scale(1.1);
+}
+
 
 /*-------------- CONTACTO ---------------*/
 .contacto-inicio{
@@ -566,8 +575,96 @@ margin-bottom: 15px;
 }
 /** ========================= PAGINA TRABAJOS =========================**/
 
+.hero-trabajos {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("/img_trabajos/hero_trabajos.png") no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--Blanco);
+    padding: 20px;
+}
 
+.hero-trabajos h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 10px;
+}
 
+.galeria {
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    background: var(--Blanco);
+}
+
+.card-trabajo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-trabajo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.card-trabajo:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url(/img/imagen_madera.png);
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.garantia {
+    padding: 70px 10%;
+    text-align: center;
+    color: var(--Blanco);
+}
+
+.cta {
+    text-align: center;
+    padding: 70px 10%;
+    background: var(--MarronClaro);
+}
+
+.cta h2 {
+    margin-bottom: 15px;
+    color: var(--Marron);
+}
+
+.cta p{
+    color: var(--Marron);
+}
+
+.boton-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #2EC4B6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.boton-cta:hover {
+    background-color: #239b90;
+    transform: translateY(-3px);
+}
 
 
 /** ========================= PAGINA NOSOTROS =========================**/
@@ -600,6 +697,19 @@ margin-bottom: 15px;
 /* =========================
    SECCIÓN HISTORIA
 ========================= */
+
+.oculto{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .6s ease, opacity .4s ease;
+}
+
+.visible{
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height .6s ease, opacity .4s ease;
+}
 
 .nosotros-section {
     background: var(--Blanco);
@@ -659,12 +769,14 @@ margin-bottom: 15px;
     color: white;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.9);
+    transition: all 0.4s ease;
     
 }
 
+
 .card-mv:hover {
+    background: #000000;   /* Negro */
     transform: translateY(-5px);
     
 }
